@@ -1,0 +1,211 @@
+{
+    "actions": [
+        {
+            "action": "review",
+            "module": "fstream",
+            "resolves": [
+                {
+                    "id": 886,
+                    "path": "npm>libcipm>npm-lifecycle>node-gyp>fstream",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                },
+                {
+                    "id": 886,
+                    "path": "npm>libcipm>npm-lifecycle>node-gyp>tar>fstream",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                },
+                {
+                    "id": 886,
+                    "path": "npm>libnpm>npm-lifecycle>node-gyp>fstream",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                },
+                {
+                    "id": 886,
+                    "path": "npm>libnpm>npm-lifecycle>node-gyp>tar>fstream",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                },
+                {
+                    "id": 886,
+                    "path": "npm>node-gyp>fstream",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                },
+                {
+                    "id": 886,
+                    "path": "npm>node-gyp>tar>fstream",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                },
+                {
+                    "id": 886,
+                    "path": "npm>npm-lifecycle>node-gyp>fstream",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                },
+                {
+                    "id": 886,
+                    "path": "npm>npm-lifecycle>node-gyp>tar>fstream",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                }
+            ]
+        },
+        {
+            "action": "review",
+            "module": "tar",
+            "resolves": [
+                {
+                    "id": 803,
+                    "path": "npm>libcipm>npm-lifecycle>node-gyp>tar",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                },
+                {
+                    "id": 803,
+                    "path": "npm>libnpm>npm-lifecycle>node-gyp>tar",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                },
+                {
+                    "id": 803,
+                    "path": "npm>node-gyp>tar",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                },
+                {
+                    "id": 803,
+                    "path": "npm>npm-lifecycle>node-gyp>tar",
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                }
+            ]
+        }
+    ],
+    "advisories": {
+        "803": {
+            "findings": [
+                {
+                    "version": "2.2.1",
+                    "paths": [
+                        "npm>libcipm>npm-lifecycle>node-gyp>tar",
+                        "npm>libnpm>npm-lifecycle>node-gyp>tar",
+                        "npm>node-gyp>tar",
+                        "npm>npm-lifecycle>node-gyp>tar"
+                    ],
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                }
+            ],
+            "id": 803,
+            "created": "2019-04-04T03:31:56.572Z",
+            "updated": "2019-05-15T14:13:58.612Z",
+            "deleted": null,
+            "title": "Arbitrary File Overwrite",
+            "found_by": {
+                "link": "",
+                "name": "Max Justicz"
+            },
+            "reported_by": {
+                "link": "",
+                "name": "Max Justicz"
+            },
+            "module_name": "tar",
+            "cves": [],
+            "vulnerable_versions": "<2.2.2 || >=3.0.0 <4.4.2",
+            "patched_versions": ">=2.2.2 <3.0.0 || >=4.4.2",
+            "overview": "Versions of `tar` prior to 4.4.2 for 4.x and 2.2.2 for 2.x are vulnerable to Arbitrary File Overwrite. Extracting tarballs containing a hardlink to a file that already exists in the system, and a file that matches the hardlink will overwrite the system's file with the contents of the extracted file.",
+            "recommendation": "For tar 4.x, upgrade to version 4.4.2 or later.\nFor tar 2.x, upgrade to version 2.2.2 or later.",
+            "references": "- [HackerOne Report](https://hackerone.com/reports/344595)",
+            "access": "public",
+            "severity": "high",
+            "cwe": "CWE-59",
+            "metadata": {
+                "module_type": "",
+                "exploitability": 5,
+                "affected_components": ""
+            },
+            "url": "https://npmjs.com/advisories/803"
+        },
+        "886": {
+            "findings": [
+                {
+                    "version": "1.0.11",
+                    "paths": [
+                        "npm>libcipm>npm-lifecycle>node-gyp>fstream",
+                        "npm>libcipm>npm-lifecycle>node-gyp>tar>fstream",
+                        "npm>libnpm>npm-lifecycle>node-gyp>fstream",
+                        "npm>libnpm>npm-lifecycle>node-gyp>tar>fstream",
+                        "npm>node-gyp>fstream",
+                        "npm>node-gyp>tar>fstream",
+                        "npm>npm-lifecycle>node-gyp>fstream",
+                        "npm>npm-lifecycle>node-gyp>tar>fstream"
+                    ],
+                    "dev": false,
+                    "optional": false,
+                    "bundled": true
+                }
+            ],
+            "id": 886,
+            "created": "2019-05-15T14:22:26.820Z",
+            "updated": "2019-05-15T14:24:19.890Z",
+            "deleted": null,
+            "title": "Arbitrary File Overwrite",
+            "found_by": {
+                "link": "",
+                "name": "Max Justicz"
+            },
+            "reported_by": {
+                "link": "",
+                "name": "Max Justicz"
+            },
+            "module_name": "fstream",
+            "cves": [],
+            "vulnerable_versions": "<1.0.12",
+            "patched_versions": ">=1.0.12",
+            "overview": "Versions of `fstream` prior to 1.0.12 are vulnerable to Arbitrary File Overwrite. Extracting tarballs containing a hardlink to a file that already exists in the system and a file that matches the hardlink will overwrite the system's file with the contents of the extracted file. The `fstream.DirWriter()` function is vulnerable.",
+            "recommendation": "Upgrade to version 1.0.12 or later.",
+            "references": "- [GitHub Commit](https://github.com/npm/fstream/commit/6a77d2fa6e1462693cf8e46f930da96ec1b0bb22)",
+            "access": "public",
+            "severity": "high",
+            "cwe": "CWE-59",
+            "metadata": {
+                "module_type": "",
+                "exploitability": 5,
+                "affected_components": ""
+            },
+            "url": "https://npmjs.com/advisories/886"
+        }
+    },
+    "muted": [],
+    "metadata": {
+        "vulnerabilities": {
+            "info": 0,
+            "low": 0,
+            "moderate": 0,
+            "high": 12,
+            "critical": 0
+        },
+        "dependencies": 12059,
+        "devDependencies": 0,
+        "optionalDependencies": 37,
+        "totalDependencies": 12096
+    },
+    "runId": "01456776-1ca7-4d6d-acc5-31dc9cb988cf"
+}
